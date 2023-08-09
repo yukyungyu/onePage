@@ -1,0 +1,735 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url(common.css);
+@import url(button.css);
+
+/* 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* Header________________________________________ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  opacity: 0.5;
+  z-index: 10;
+}
+/* nav */
+.menu_wrap {
+  width: 1400px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_wrap ul li a {
+  font-size: 16px;
+  font-weight: 400;
+}
+.logo {
+  filter: invert(1);
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.menu li {
+  flex: 1;
+}
+.menu li a {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #000;
+  position: relative;
+}
+.menu li a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  background-color: #000;
+  transition: 0.35s;
+}
+.menu li a:hover::before {
+  width: 100%;
+}
+.menu li a.active:before {
+  width: 100%;
+}
+/* Section________________________________________ */
+.content_wrap {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.article_title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300 !important;
+  font-size: 52px !important;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+/* 1.호텔소개 */
+.main1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+/* 딤드 처리 */
+.main1:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/visual03.jpg") no-repeat center center;
+  background-size: cover;
+  animation: zoomIn 6s ease-out;
+  z-index: -5;
+}
+.main1 .title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main1 .title {
+  display: inline-block;
+  width: 735px;
+}
+.main1 .title span {
+  display: block;
+  margin: 10px 0;
+  color: #fff;
+  text-align: center;
+  animation: textIn 3.5s ease-in;
+}
+.main1 .title span:first-child {
+  font-size: 36px;
+}
+.main1 .title span:last-child {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 72px;
+}
+.main1 .title span:nth-of-type(3) {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  animation: textIn 4.5s ease-in;
+}
+/* 1-2 회사소개 */
+.main1_2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.main1_2 .company_info_wrap {
+  width: inherit;
+  height: inherit;
+}
+.main1_2 .company_info_wrap .company_info1,
+.main1_2 .company_info_wrap .company_info2 {
+  display: flex;
+  height: 50%;
+}
+.main1_2 .company_info_wrap .company_info1 {
+  background: url("../img/richardMeier.jpg") no-repeat right center;
+  background-size: cover;
+}
+.main1_2 .company_info_wrap .company_info1 .company_info1_text,
+.main1_2 .company_info_wrap .company_info2 .company_info2_text {
+  flex: 2;
+  position: relative;
+}
+.main1_2 .company_info_wrap .company_info1 .company_info1_text span,
+.main1_2 .company_info_wrap .company_info2 .company_info2_text span {
+  position: absolute;
+  display: block;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-align: center;
+  animation: textIn 0.5s ease-in;
+  line-height: 36px;
+}
+.main1_2 .company_info_wrap .company_info1 .architect_img {
+  flex: 4;
+  width: 100%;
+}
+.main1_2 .company_info_wrap .company_info2 .hotel_img {
+  flex: 4;
+  width: 100%;
+  background: url("../img/visual05.jpg") no-repeat center center;
+  background-size: cover;
+}
+/* 2.룸타입 */
+.main2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.main2 .roomType_wrap {
+  display: flex;
+  height: inherit;
+}
+.main2 .roomType_wrap .room_info_wrap {
+  display: table;
+  flex: 1;
+}
+.main2 .room_info {
+  height: inherit;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 30px;
+}
+.main2 .room_info .room_info_text {
+  width: 100%;
+  margin: 100px 0;
+}
+.main2 .room_info .room_info_text span:first-child {
+  text-align: center;
+}
+
+.main2 .room_info .room_info_text span {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 300;
+  margin: 30px 0;
+}
+
+.main2 .room_info .roomType_nm {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+.main2 .room_info .roomType_nm ul li {
+  padding: 15px;
+  color: #616161;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+}
+/* 객실이미지 */
+.main2 .room_img {
+  flex: 3;
+  width: 100%;
+  height: 100%;
+}
+.room_img input[name="slide"] {
+  display: none;
+}
+.room_img .slidewrap {
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+}
+.room_img .slidelist {
+  white-space: nowrap;
+  font-size: 0;
+  height: 100%;
+}
+.room_img .slidelist > li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 100vh;
+  transition: all 5s;
+  animation: roomImg 15s ease-in infinite;
+}
+.room_img .slidelist .premium_deluxe {
+  background: url("../img/room/ondol01.jpg") no-repeat center center;
+  background-size: cover;
+}
+.room_img .slidelist .gallery_double {
+  background: url("../img/room/gallery_double01.jpg") no-repeat center center;
+  background-size: cover;
+}
+.room_img .slidelist .studio_double {
+  background: url("../img/room/deluxe01.jpg") no-repeat center center;
+  background-size: cover;
+}
+.room_img .slidelist .suite {
+  background: url("../img/room/presidential01.jpg") no-repeat center center;
+  background-size: cover;
+}
+.room_img .slidelist > li a {
+  display: block;
+  position: relative;
+}
+.room_img .slidelist label {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  transform: translateY(-50%);
+  padding: 50px;
+  cursor: pointer;
+}
+
+.room_img .slidelist .left {
+  left: 100px;
+  background: url("../img/arrow_back.png") center center / 80% no-repeat;
+  filter: invert(1);
+}
+.room_img .slidelist .right {
+  right: 30px;
+  background: url("../img/arrow_forward.png") center center / 80% no-repeat;
+  filter: invert(1);
+}
+.room_img input[id="slide01"]:checked ~ .slidewrap > .slidelist > li {
+  transform: translateX(0%);
+}
+.room_img input[id="slide02"]:checked ~ .slidewrap > .slidelist > li {
+  transform: translateX(-100%);
+}
+.room_img input[id="slide03"]:checked ~ .slidewrap > .slidelist > li {
+  transform: translateX(-200%);
+}
+.room_img input[id="slide04"]:checked ~ .slidewrap > .slidelist > li {
+  transform: translateX(-300%);
+}
+/* 3.다이닝 */
+.main3 {
+  width: 100%;
+  height: 100vh;
+}
+.main3 > div {
+  width: 1400px;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  margin: auto;
+  position: relative;
+}
+
+.main3 .dining_wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main3 .dining_wrap .dining_header {
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.main3 .dining_wrap .dining_header .dining_text {
+  width: inherit;
+  text-align: center;
+}
+
+.main3 .dining_wrap .dining_article {
+  height: 100%;
+  margin: 0 auto;
+  /* padding: 50px 0; */
+}
+.main3 .dining_wrap .dining_article .dining_img div span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #333;
+}
+.main3 .dining_wrap .dining_article .dining_img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.main3 .dining_wrap .dining_img div {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+.main3 .dining_wrap .dining_img div .dining01 {
+  background: url("../img/restaurant02.jpg") no-repeat center center;
+  background-size: cover;
+}
+.main3 .dining_wrap .dining_img div .dining02 {
+  background: url("../img/table02.jpg") no-repeat center center;
+  background-size: cover;
+}
+.main3 .dining_wrap .dining_img div .dining03 {
+  background: url("../img/lounge02.jpg") no-repeat center center;
+  background-size: cover;
+}
+.main3 .dining_wrap .dining_img div .dining01:before,
+.main3 .dining_wrap .dining_img div .dining02:before,
+.main3 .dining_wrap .dining_img div .dining03:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s;
+}
+.main3 .dining_wrap .dining_img div .dining01:hover,
+.main3 .dining_wrap .dining_img div .dining02:hover,
+.main3 .dining_wrap .dining_img div .dining03:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.main3 .dining_wrap .dining_img div .dining01:hover:before,
+.main3 .dining_wrap .dining_img div .dining02:hover:before,
+.main3 .dining_wrap .dining_img div .dining03:hover:before {
+  opacity: 1;
+  cursor: pointer;
+}
+/* 플러스 아이콘 */
+.main3 .dining_wrap .dining_img div i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 46px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+.main3 .dining_wrap .dining_img div .dining01:hover i,
+.main3 .dining_wrap .dining_img div .dining02:hover i,
+.main3 .dining_wrap .dining_img div .dining03:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+/* 5.레져 */
+.main5 {
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+}
+.main5 > div {
+  width: 100%;
+  height: 100vh;
+  /* padding-top: 100px; */
+  margin: auto;
+  position: relative;
+}
+.main5 .leisure_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main5 .leisure_wrap .leisure_header {
+  flex: 1;
+  width: 100%;
+}
+.main5 .leisure_wrap .leisure_header .leisure_text span {
+  display: block;
+  margin: auto;
+}
+.leisure_header .leisure_text span {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+.leisure_wrap .leisure_article {
+  flex: 6;
+  width: 100%;
+  height: 100%;
+}
+.leisure_wrap .leisure_article .gallery {
+  height: 100%;
+  display: flex;
+}
+
+.leisure_wrap .leisure_article .gallery li {
+  border-style: none;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.leisure_article .gallery li:nth-child(1) {
+  background: url(../img/the_pool01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.leisure_article .gallery li:nth-child(2) {
+  background: url(../img/the_gym01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.leisure_article .gallery li:nth-child(3) {
+  background: url(../img/treatment02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.leisure_article .gallery li:nth-child(4) {
+  background: url(../img/kidCamp02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.leisure_article .gallery li:nth-child(5) {
+  background: url(../img/thermal_suite03.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.leisure_article .gallery li:hover {
+  flex: 3;
+}
+.leisure_article .gallery .content {
+  position: absolute;
+  transition: 0.5s;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+}
+.leisure_article .gallery li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.leisure_article .gallery .content h2 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+  font-style: italic;
+}
+.leisure_article .gallery .content p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+.leisure_article .gallery li:hover:before {
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.leisure_article .gallery li:hover .content {
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+/* 6.부대시설 */
+.main6 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #eee;
+}
+.main6 > div {
+  width: 1400px;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  margin: auto;
+  position: relative;
+}
+.main6 .facilities_wrap {
+  width: 100%;
+  height: 100%;
+}
+.main6 .facilities_wrap .facilities_header {
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.main6 .facilities_wrap .facilities_header .facilities_text {
+  width: inherit;
+  text-align: center;
+}
+.main6 .facilities_wrap .facilities_article {
+  max-width: 1400px;
+  height: 735px; /* 15인치 노트북에서 보면 안됨 */
+  margin: 0 auto;
+}
+
+.facilities_article .tabs {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+/* 슬라이드 영역 */
+.facilities_article .tabs .facilities_img {
+  width: calc(1400px * 5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facilities_article .tabs .facilities_img div {
+  width: inherit;
+  height: inherit;
+}
+.facilities_article .tabs .facilities_img div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.facilities_article .tabs .facilities_img div:hover {
+  transition: 1s ease-out;
+  transform: scale(1.1); /* 선생님께 여쭤보기 */
+  cursor: pointer;
+}
+
+.facilities_article input[name="tabmenu"] {
+  display: none;
+}
+
+input[id="tab1"]:checked ~ .slite_btn label[for="tab1"],
+input[id="tab2"]:checked ~ .slite_btn label[for="tab2"],
+input[id="tab3"]:checked ~ .slite_btn label[for="tab3"],
+input[id="tab4"]:checked ~ .slite_btn label[for="tab4"],
+input[id="tab5"]:checked ~ .slite_btn label[for="tab5"] {
+  font-weight: 400;
+}
+input[id="tab1"]:checked ~ .tabs .facilities_img div img {
+  transform: translateX(0);
+  /* left: 0; */
+}
+input[id="tab2"]:checked ~ .tabs .facilities_img div img {
+  transform: translateX(-1400px);
+  /* left: -1400px; */
+}
+input[id="tab3"]:checked ~ .tabs .facilities_img div img {
+  transform: translateX(-2800px);
+  /* left: -2800px; */
+}
+input[id="tab4"]:checked ~ .tabs .facilities_img div img {
+  transform: translateX(-4200px);
+  /* left: -4200px; */
+}
+input[id="tab5"]:checked ~ .tabs .facilities_img div img {
+  transform: translateX(-5600px);
+  /* left: -5600px; */
+}
+
+.slite_btn {
+  width: 1400px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.slite_btn label {
+  display: inline-block;
+  font-weight: 200;
+  font-size: 28px;
+}
+
+/* Footer________________________________________ */
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: #90b2b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+.footer_wrap {
+  position: absolute;
+  width: 1400px;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_logo {
+  flex: 1;
+}
+.footer_wrap nav {
+  flex: 4;
+}
+.footer_menu li a,
+address {
+  color: #fff;
+}
+.footer_menu {
+  display: flex;
+}
+.footer_menu li {
+  margin: 15px 15px 15px 0;
+}
+address {
+  font-style: normal;
+}
+.footer_copy {
+  margin-top: 5px;
+  display: block;
+}
+.footer_copy {
+  font-style: normal;
+  font-size: 12px;
+  color: #ddd;
+}
+/* animation________________________________________ */
+/* img zoom */
+@keyframes zoomIn {
+  from {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* text effect */
+@keyframes textIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    display: 1;
+  }
+}
+@keyframes roomImg {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+  125% {
+    transform: translateX(-100%);
+  }
+  150% {
+    transform: translateX(0%);
+  }
+}

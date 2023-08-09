@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.square_btn {
+  height: 50px;
+  width: 160px;
+  font-size: 18px;
+  background-color: #fff;
+  display: block;
+  margin: 10px auto;
+  border: 0.5px solid #000;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+.square_btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.sp_btn{
+  display: block;
+  background:#000;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:50px;
+  font-size:1.6em;
+  padding:0 2em;
+  margin: auto;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+.sp_btn:hover{
+  background:rgba(0, 0, 0, 0);
+  color:#000;
+}
+.sp_btn:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:0.5px;
+  width:0;
+  background: #000;
+  transition:400ms ease all;
+}
+.sp_btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.sp_btn:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
