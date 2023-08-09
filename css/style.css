@@ -521,6 +521,9 @@ header {
   font-style: italic;
   margin-bottom: 50px;
 }
+.leisure_article .gallery li:nth-of-type(5) .content h2 {
+  margin-bottom: 50px;
+}
 .leisure_article .gallery li:hover:before {
   transition: 0.5s;
   top: 0;
