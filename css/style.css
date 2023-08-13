@@ -563,7 +563,7 @@ input[id="roomType04"]:checked ~ .r_slide_btn label[for="roomType04"] {
   transition: 0.5s;
 }
 .gallery li:nth-child(1) {
-  background: url(../img/the_pool02.jpg) no-repeat center center;
+  background: url(../img/the_pool01.jpg) no-repeat center center;
   background-size: cover;
 }
 .gallery li:nth-child(2) {
