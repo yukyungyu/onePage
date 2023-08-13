@@ -390,27 +390,42 @@ header {
   width: 1400px;
   height: inherit;
   position: relative;
-}
-.roomType_imgs div img {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
   transition: 1s;
+}
+.roomType_imgs div:nth-child(1) {
+  background: url("../img/room/ondol02.jpg");
+  background-size: cover;
+}
+.roomType_imgs div:nth-child(2) {
+  background: url("../img/room/gallery_double01.jpg");
+  background-size: cover;
+}
+.roomType_imgs div:nth-child(3) {
+  background: url("../img/room/deluxe01.jpg");
+  background-size: cover;
+}
+.roomType_imgs div:nth-child(4) {
+  background: url("../img/room/seamarq03.jpg");
+  background-size: cover;
 }
 input[name="r_tabmenu"] {
   display: none;
 }
-input[id="roomType01"]:checked ~ .roomType_tabs .roomType_imgs div img {
+input[id="roomType01"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(0);
+  animation: roomType01 7s linear infinite alternate both;
 }
-input[id="roomType02"]:checked ~ .roomType_tabs .roomType_imgs div img {
+input[id="roomType02"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(-1400px);
+  animation: roomType02 4s linear infinite alternate both;
 }
-input[id="roomType03"]:checked ~ .roomType_tabs .roomType_imgs div img {
+input[id="roomType03"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(-2800px);
+  animation: roomType03 4s linear infinite alternate both;
 }
-input[id="roomType04"]:checked ~ .roomType_tabs .roomType_imgs div img {
+input[id="roomType04"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(-4200px);
+  animation: roomType04 7s linear infinite alternate both;
 }
 .r_slide_btn {
   width: 100%;
@@ -427,6 +442,37 @@ input[id="roomType04"]:checked ~ .roomType_tabs .roomType_imgs div img {
   font-weight: 200;
   font-size: 20px;
   margin: 0 auto;
+  position: relative;
+}
+.r_slide_btn label[for="roomType01"]:before,
+.r_slide_btn label[for="roomType02"]:before,
+.r_slide_btn label[for="roomType03"]:before,
+.r_slide_btn label[for="roomType04"]:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: inherit;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 200;
+  color: #666;
+  text-align: center;
+  letter-spacing: 0;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.3s;
+}
+.r_slide_btn label[for="roomType01"]:before {
+  content: "Premium Deluxe";
+}
+.r_slide_btn label[for="roomType02"]:before {
+  content: "Gallery Double";
+}
+.r_slide_btn label[for="roomType03"]:before {
+  content: "Studio Double";
+}
+.r_slide_btn label[for="roomType04"]:before {
+  content: "Suite";
 }
 .r_slide_btn button {
   margin-top: 50px;
@@ -436,6 +482,13 @@ input[id="roomType02"]:checked ~ .r_slide_btn label[for="roomType02"],
 input[id="roomType03"]:checked ~ .r_slide_btn label[for="roomType03"],
 input[id="roomType04"]:checked ~ .r_slide_btn label[for="roomType04"] {
   font-weight: 400;
+}
+input[id="roomType01"]:checked ~ .r_slide_btn label[for="roomType01"]:before,
+input[id="roomType02"]:checked ~ .r_slide_btn label[for="roomType02"]:before,
+input[id="roomType03"]:checked ~ .r_slide_btn label[for="roomType03"]:before,
+input[id="roomType04"]:checked ~ .r_slide_btn label[for="roomType04"]:before {
+  top: 100%;
+  opacity: 1;
 }
 /* ---------------- Section : 2.다이닝 ---------------- */
 .main_03 {
@@ -986,17 +1039,55 @@ address {
     background-size: cover;
   }
 }
-@keyframes roomImgChange {
+@keyframes roomType01 {
   0% {
-    background: url("../img/room/.jpg") no-repeat;
+    background: url("../img/room/ondol02.jpg") no-repeat;
     background-size: cover;
   }
   50% {
-    background: url("../img/room/.jpg") no-repeat;
+    background: url("../img/room/double01.jpg") no-repeat;
     background-size: cover;
   }
   100% {
-    background: url("../img/room/.jpg") no-repeat;
+    background: url("../img/room/twin02.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+@keyframes roomType02 {
+  0% {
+    background: url("../img/room/gallery_double01.jpg") no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url("../img/room/gallery_double02.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+@keyframes roomType03 {
+  0% {
+    background: url("../img/room/deluxe01.jpg") no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url("../img/room/deluxe02.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+@keyframes roomType04 {
+  0% {
+    background: url("../img/room/hoanjae01.jpg") no-repeat;
+    background-size: cover;
+  }
+  30% {
+    background: url("../img/room/executive01.jpg") no-repeat;
+    background-size: cover;
+  }
+  65% {
+    background: url("../img/room/corner01.jpg") no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url("../img/room/presidential02.jpg") no-repeat;
     background-size: cover;
   }
 }
