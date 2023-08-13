@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>씨마크 SEAMARQ</title>
+     <!-- XEICON -->
+     <link
+     rel="stylesheet"
+     href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+   />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -17,14 +22,15 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- header -->
+    <!-- Header -->
     <header>
       <nav class="menu_wrap">
         <div class="logo">
-          <a href="#home"><img src="img/씨마크_logo.png" alt="로고" /></a>
+          <a href="#"><img src="img/씨마크_logo.png" alt="로고" /></a>
         </div>
         <ul class="menu">
           <li><a href="#company">ABOUT</a></li>
@@ -40,234 +46,460 @@
         </ul>
       </nav>
     </header>
-    <!-- section -->
-    <section>
-      <div class="content_wrap">
-        <!-- 1.호텔소개 -->
-        <div id="home" class="main1">
-          <div class="title">
-            <span>진정한 쉼을 위한 단 하나의 공간</span>
-            <span>SEAMARQ</span>
-          </div>
+    <!-- Content Start -->
+    <!-- Section : Main -->
+    <section class="main">
+      <div class="title">
+        <p>진정한 쉼을 위한 단 하나의 공간</p>
+        <p>SEAMARQ</p>
+      </div>
+      <div class="mouse-box">
+        <div class="mouse">
+          <span class="wheele"></span>
         </div>
-        <div id="company" class="main1_2">
-          <div class="company_info_wrap">
-            <div class="company_info1">
-              <div class="company_info1_text">
-                <span
-                  >강릉 경포의 아름다운 동해바다와<br />마주하고 있는 씨마크
-                  호텔은<br />세계적 건축가 리처드 마이어가 설계하고,<br />최고의
-                  시설과 서비스를 갖춘<br />국내 최초의
-                  럭스티지(Luxury+Prestige) 호텔 입니다.
+        <div class="arrow-down">
+          <span class="material-icons-outlined arrow1">
+            expand_more
+          </span>
+          <span class="material-icons-outlined arrow2">
+            expand_more
+          </span>
+          <span class="material-icons-outlined arrow3">
+            expand_more
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- Section : 1.About -->
+    <section id="company" class="main_01">
+      <div class="company_wrap">
+        <div class="company_content">
+          <div class="line"></div>
+          <div class="about_text">
+            <h1>ABOUT</h1>
+            <span>
+              최고의 시설과 서비스를 갖춘<br />
+              국내 최초의<br>
+            </span>
+            <span>
+              Luxury+Prestige <br>
+              럭스티지 호텔
+            </span>
+          </div>
+          <span>
+            고객의 휴식이 최고의 순간이 되는 곳, <br />
+            씨마크 호텔에 오신 여러분을 환영합니다.
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- Section : 2.Acommodation -->
+    <section id="roomType" class="main_02">
+      <div class="roomType_wrap">
+        <div class="roomType_content">
+          <div class="header">
+            <span class="article_title">accommodation</span>
+            <div class="subtitle_area">
+              <span class="subtitle">바다를 품은 객실</span>
+              <button class="btn_01">View more 
+                <span class="material-symbols-outlined">
+                  chevron_right
                 </span>
-              </div>
-              <div class="architect_img"></div>
-            </div>
-            <div class="company_info2">
-              <div class="hotel_img"></div>
-              <div class="company_info2_text">
-                <span
-                  >씨마크 호텔 서비스의 시작과 끝은 모두 <br />고객의 '진정한
-                  쉼'에 맞춰져 있습니다. <br />바다를 품은 객실과 제철 식재료로
-                  만든 건강한 음식, <br />절경을 만끽하는 레저시설 등
-                  <br />천혜의 자연 속에서 본질적인 휴식을 위한 공간을
-                  <br />지향하는 씨마크 호텔. <br />고객의 휴식이 최고의 순간이
-                  되는 곳, <br />씨마크 호텔에 오신 여러분을 환영합니다.
-                </span>
-              </div>
+              </button>
             </div>
           </div>
-        </div>
-        <!-- 2.룸타입 -->
-        <div id="roomType" class="main2">
-          <div class="roomType_wrap">
-            <div class="room_info_wrap">
-              <div class="room_info">
-                <div class="room_info_text">
-                  <span class="article_title">ACCOMMODATION</span>
-                  <span>진정한 휴식을 취하는 공간</span>
-                </div>
-                <div class="roomType_nm">
-                  <ul>
-                    <li class="premium_deluxe">프리미엄 디럭스</li>
-                    <li class="gallery_double">갤러리 더블</li>
-                    <li class="studio_double">스튜디오 더블</li>
-                    <li class="suite">스위트</li>
-                  </ul>
-                </div>
-                <!-- <button class="square_btn_tr">View more</button> -->
-                <button class="sp_btn">View more</button>
-              </div>
-            </div>
+          <div class="article">
+            <input type="radio" name="r_tabmenu" id="roomType01" checked />
+            <input type="radio" name="r_tabmenu" id="roomType02" />
+            <input type="radio" name="r_tabmenu" id="roomType03" />
+            <input type="radio" name="r_tabmenu" id="roomType04" />
             <!-- 슬라이드 -->
-            <div class="room_img">
-              <input type="radio" name="slide" id="slide01" checked />
-              <input type="radio" name="slide" id="slide02" />
-              <input type="radio" name="slide" id="slide03" />
-              <input type="radio" name="slide" id="slide04" />
-              <div class="slidewrap">
-                <ul class="slidelist">
-                  <li class="premium_deluxe">
-                    <a>
-                      <label for="slide04" class="left"></label>
-                      <label for="slide02" class="right"></label>
-                    </a>
-                  </li>
-                  <li class="gallery_double">
-                    <a>
-                      <label for="slide01" class="left"></label>
-                      <label for="slide03" class="right"></label>
-                    </a>
-                  </li>
-                  <li class="studio_double">
-                    <a>
-                      <label for="slide02" class="left"></label>
-                      <label for="slide04" class="right"></label>
-                    </a>
-                  </li>
-                  <li class="suite">
-                    <a>
-                      <label for="slide03" class="left"></label>
-                      <label for="slide01" class="right"></label>
-                    </a>
-                  </li>
-                </ul>
+            <div class="roomType_tabs">
+              <div class="roomType_imgs">
+                <div><img src="img/room/ondol01.jpg" /></div>
+                <div><img src="img/room/gallery_double02.jpg" /></div>
+                <div><img src="img/room/deluxe01.jpg" /></div>
+                <div><img src="img/room/seamarq03.jpg" /></div>
               </div>
+            </div>
+            <!-- slide_btn -->
+            <div class="r_slide_btn">
+              <label for="roomType01">프리미엄</label>
+              <label for="roomType02">갤러리 더블</label>
+              <label for="roomType03">스튜디오 더블</label>
+              <label for="roomType04">스위트</label>
             </div>
           </div>
         </div>
-        <!-- 3.다이닝 -->
-        <div id="dining" class="main3">
-          <div>
-            <div class="dining_wrap">
-              <div class="dining_header">
-                <div class="dining_text">
-                  <span class="article_title">DINING</span>
-                </div>
-              </div>
-              <div class="dining_article">
-                <div class="dining_img">
-                  <div>
-                    <span>더 레스토랑</span>
-                    <div class="dining01">
-                      <i class="xi-plus-thin"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span>쉐프스 테이블</span>
-                    <div class="dining02">
-                      <i class="xi-plus-thin"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span>더 라운지</span>
-                    <div class="dining03">
-                      <i class="xi-plus-thin"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </div>
+    </section>
+    <!-- Section : 3.다이닝 -->
+    <section id="dining" class="main_03">
+      <div class="dining_wrap">
+        <div class="dining_content">
+          <div class="header">
+            <span class="article_title">DINING</span>
+            <div class="subtitle_area">
+              <span class="subtitle">제철 식재료로 만든 건강한 음식</span>
+              <button class="btn_01">View more
+                <span class="material-symbols-outlined">
+                  chevron_right
+                </span>
+              </button>
             </div>
           </div>
-        </div>
-        <!-- 5.레져 -->
-        <div id="leisure" class="main5">
-          <div>
-            <div class="leisure_wrap">
-              <div class="leisure_header">
-                <div class="leisure_text">
-                  <span class="article_title">LEISURE</span>
-                </div>
-              </div>
-              <div class="leisure_article">
-                <ul class="gallery">
-                  <li>
-                    <div class="content">
-                      <h2>CLUB INFINITY</h2>
-                      <p>더 풀</p>
-                      <button class="sp_btn">View more</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="content">
-                      <h2>CLUB INFINITY</h2>
-                      <p>더 짐</p>
-                      <button class="sp_btn">View more</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="content">
-                      <h2>THE SPA</h2>
-                      <p>오모로 비짜</p>
-                      <button class="sp_btn">View more</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="content">
-                      <h2>THE SPA</h2>
-                      <p>써멀 스위트</p>
-                      <button class="sp_btn">View more</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="content">
-                      <h2>KIDS CLUB</h2>
-                      <button class="sp_btn">View more</button>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 6.부대시설 -->
-        <div id="facilities" class="main6">
-          <div>
-            <div class="facilities_wrap">
-              <div class="facilities_header">
-                <div class="facilities_text">
-                  <span class="article_title">FACILITIES</span>
-                </div>
-              </div>
-              <div class="facilities_article">
-                <input type="radio" name="tabmenu" id="tab1" checked />
-                <input type="radio" name="tabmenu" id="tab2" />
-                <input type="radio" name="tabmenu" id="tab3" />
-                <input type="radio" name="tabmenu" id="tab4" />
-                <input type="radio" name="tabmenu" id="tab5" />
-
-                <!-- 슬라이드 -->
-                <div class="tabs">
-                  <div class="facilities_img">
-                    <div><img src="img/library03.jpg" /></div>
-                    <div><img src="img/business_center02.jpg" /></div>
-                    <div><img src="img/theshop03.jpg" /></div>
-                    <div><img src="img/arena01.jpg" /></div>
-                    <div><img src="img/pavilion02.jpg" /></div>
+          <div class="article">
+            <div class="dining_img">
+              <div class="area">
+                <span>쉐프스 테이블</span>
+                <div class="dining01">
+                  <img src="img/table02.jpg" alt="" />
+                  <div class="table_wrap">
+                    <table class="table r_detail_01">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">좌석 수</th>
+                          <th scope="col">메뉴구성</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">더 레스토랑</td>
+                          <td class="noBorder">1F</td>
+                          <td class="noBorder">160석</td>
+                          <td class="noBorder">메뉴 보기</td>
+                        </tr>
+                        <tr>
+                          <td class="noBorder">운영시간</td>
+                          <td class="noBorder" colspan="4">
+                            07:00~10:00 : 조식뷔페<br>
+                            12:00~21:30 : 단품메뉴<br>
+                            18:00~21:30 : 석식뷔페 (주중 : 월~금)<br>
+                            17:30~21:30 : 석식뷔페 (주말 : 토, 일, 공휴일)<br>
+                            ※ 상기 시간은 특정 성수기 기간에는 변동될 수 있습니다.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-
-                <div class="slite_btn">
-                  <label for="tab1">더 라이브러리</label>
-                  <label for="tab2">비즈니스 센터</label>
-                  <label for="tab3">더 샵</label>
-                  <label for="tab4">더 아레나</label>
-                  <label for="tab5">전시관</label>
+              </div>
+              <div class="area">
+                <span>더 레스토랑</span>
+                <div class="dining02">
+                  <img src="img/restaurant02.jpg" alt="" />
+                  <div class="table_wrap">
+                    <table class="table r_detail_02">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">좌석 수</th>
+                          <th scope="col">메뉴구성</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">쉐프스 테이블</td>
+                          <td class="noBorder">1F</td>
+                          <td class="noBorder">64석</td>
+                          <td class="noBorder">메뉴 보기</td>
+                        </tr>
+                        <tr>
+                          <td class="noBorder">운영시간</td>
+                          <td class="noBorder" colspan="4">
+                            12:00 ~ 22:00 강원도 제철 식재료를 이용하여 조리하기 때문에 최소 2시간 전 예약 부탁드립니다
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="area">
+                <span>더 라운지</span>
+                <div class="dining03">
+                  <img src="img/lounge02.jpg" alt="" />
+                  <div class="table_wrap">
+                    <table class="table r_detail_03">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">좌석 수</th>
+                          <th scope="col">메뉴구성</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">더 라운지</td>
+                          <td class="noBorder">Lobby F</td>
+                          <td class="noBorder" rowspan="2">
+                            72석<br>
+                            바: 44석<br>
+                            공용공간: 28석
+                          </td>
+                          <td class="noBorder">
+                            스페셜티 커피<br>
+                            음료 및 간단한 스낵류
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="noBorder">더 바</td>
+                          <td class="noBorder">Lobby F</td>
+                          <td class="noBorder">맥주, 칵테일, 와인 등</td>
+                        </tr>
+                        <tr>
+                          <td class="noBorder">운영시간</td>
+                          <td class="noBorder" colspan="4">
+                            커피숍 10:00~20:00 / 바 20:00~01:00
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- content_wrap end -->
     </section>
-    <!-- footer -->
+    <!-- Section : 5.레져 -->
+    <section id="leisure" class="main_05">
+      <div class="leisure_wrap">
+        <div class="leisure_content">
+          <div class="header">
+            <span class="article_title">LEISURE</span>
+            <div class="subtitle_area">
+              <span class="subtitle">절경을 만끽하는 레저시설</span>
+              <button class="btn_02">View more
+                <span class="material-symbols-outlined">
+                  chevron_right
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="article">
+            <ul class="gallery">
+              <li>
+                <div class="content">
+                  <h2>CLUB INFINITY</h2>
+                  <p>더 풀</p>
+                </div>
+              </li>
+              <li>
+                <div class="content">
+                  <h2>CLUB INFINITY</h2>
+                  <p>더 짐</p>
+                </div>
+              </li>
+              <li>
+                <div class="content">
+                  <h2>THE SPA</h2>
+                  <p>오모로 비짜</p>
+                </div>
+              </li>
+              <li>
+                <div class="content">
+                  <h2>THE SPA</h2>
+                  <p>써멀 스위트</p>
+                </div>
+              </li>
+              <li>
+                <div class="content">
+                  <h2>KIDS CLUB</h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section : 6.부대시설 -->
+    <section id="facilities" class="main_06">
+      <div class="facilities_wrap">
+        <div class="facilities_content">
+          <div class="header">
+            <span class="article_title">FACILITIES</span>
+            <div class="subtitle_area">
+              <span class="subtitle">본질적인 휴식을 위한 공간</span>
+              <div class="subtitle_area">
+                <button class="btn_02">View more
+                  <span class="material-symbols-outlined">
+                    chevron_right
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="article">
+            <input type="radio" name="f_tabmenu" id="tab1" checked />
+            <input type="radio" name="f_tabmenu" id="tab2" />
+            <input type="radio" name="f_tabmenu" id="tab3" />
+            <input type="radio" name="f_tabmenu" id="tab4" />
+            <input type="radio" name="f_tabmenu" id="tab5" />
+  
+            <!-- 슬라이드 -->
+            <div class="tabs">
+              <div class="facilities_img">
+                <!-- 라이브러리 -->
+                <div>
+                  <img src="img/library03.jpg" />
+                  <div class="table_wrap">
+                    <table class="table f_detail_01">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">구성</th>
+                          <th scope="col">운영시간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">더 라이브러리</td>
+                          <td class="noBorder">2F</td>
+                          <td class="noBorder">VIP 라운지 (스위트 룸 고객 전용)</td>
+                          <td class="noBorder">09:00~21:30</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- 비즈니스센터 -->
+                <div>
+                  <img src="img/business_center02.jpg" />
+                  <div class="table_wrap">
+                    <table class="table f_detail_02">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">구성</th>
+                          <th scope="col">운영시간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">비즈니스 센터</td>
+                          <td class="noBorder">1F</td>
+                          <td class="noBorder">회의실 2실, 고객용 PC, 기타 비즈니스 서비스</td>
+                          <td class="noBorder">09:00~18:00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- 더샵 -->
+                <div>
+                  <img src="img/theshop03.jpg" />
+                  <div class="table_wrap">
+                    <table class="table f_detail_03">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">구성</th>
+                          <th scope="col">운영시간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">더 샵</td>
+                          <td class="noBorder">1F</td>
+                          <td class="noBorder">호텔 친환경 어메니티, 침구류,<br>
+                            시그니처 디퓨저, 캔들, 룸스프레이,<br>
+                            한사토이 인형 및 플레이 키트 등 판매</td>
+                          <td class="noBorder">09:00~18:00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- 더 아레나 -->
+                <div>
+                  <img src="img/arena01.jpg" />
+                  <div class="table_wrap">
+                    <table class="table detail_04">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">구성</th>
+                          <th scope="col">운영시간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">더 아레나(야외 공연장)</td>
+                          <td class="noBorder">외부 단지 내</td>
+                          <td class="noBorder">무대 및 조명, 산책로 단체 이용객 이벤트 공간</td>
+                          <td class="noBorder">계절별 이벤트 연중 실시(예정)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- 전시관 -->
+                <div>
+                  <img src="img/pavilion02.jpg" />
+                  <div class="table_wrap">
+                    <table class="table detail_05">
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">위치</th>
+                          <th scope="col">구성</th>
+                          <th scope="col">운영시간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="noBorder">전시관(문화재 전시관)</td>
+                          <td class="noBorder">단지 입구</td>
+                          <td class="noBorder">전시관: 4세기~5세기경 신라시대 문화재 전시<br>
+                            대상: 투숙객 및 일반 관광객</td>
+                          <td class="noBorder">10:00~18:00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="f_slide_btn">
+              <label for="tab1">더 라이브러리</label>
+              <label for="tab2">비즈니스 센터</label>
+              <label for="tab3">더 샵</label>
+              <label for="tab4">더 아레나</label>
+              <label for="tab5">전시관</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wedding_banner">
+      <div>
+        <h1>Luxury Wedding In SEAMARQ</h1>
+        <span>
+          동해 바다를 마주한 바다홀에서<br>
+          평생 잊지 못할 순간을 맞이하세요.
+        </span>
+        <button class="sp_btn">View more</button>
+      </div>
+    </section>
+    <!-- Content end -->
+    <!-- Footer -->
     <footer>
       <div class="footer_wrap">
         <div class="footer_logo">
           <img src="img/씨마크_logo.png" alt="foot_logo" />
         </div>
-        <nav class="footer_manu_nav">
+        <nav>
           <ul class="footer_menu">
             <li><a href="#none">개인정보처리방침</a></li>
             <li><a href="#none">이용약관</a></li>
@@ -275,6 +507,13 @@
             <li><a href="#none">제휴문의</a></li>
             <li><a href="#none">사이트맵</a></li>
           </ul>
+          <div class="sns">
+            <a href="none"><i class="xi-facebook"></i></a>
+            <a href="none"><i class="xi-instagram"></i></a>
+            <a href="none"><i class="xi-kakaostory"></i></a>
+            <a href="none"><i class="xi-naver"></i></a>
+            <a href="none"><i class="xi-youtube-play"></i></a>
+          </div>
           <address class="footer_info">
             씨마크호텔 ㅣ 강원도 강릉시 해안로 406번길 2 TEL : 033-650-7000 ㅣ
             단체 행사문의 : 02 746 7488 FAX :033-650-7100 | E-mail :
