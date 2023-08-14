@@ -1,0 +1,107 @@
+/* 01. 모바일 사이즈보다 큰 너비 값이 있다면 모두 100%로 변경 */
+/* 02. 가로 배치된 레이아웃을 세로 배치로 변경작업 (float:none, width: 100%)*/
+
+@media (max-width: 768px) {
+  /* Default CSS */
+  section {
+    padding: 50px 15px;
+  }
+  header {
+    display: none;
+  }
+  /* Mouse Wheele */
+  .mouse-box {
+    bottom: 15%;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Common CSS */
+  .article {
+    margin-top: 20px;
+  }
+  .article_title {
+    font-size: 48px !important;
+    margin: 15px 0 10px;
+  }
+  /* ---------------- Section : 1.About ---------------- */
+  .company_content {
+    width: 90%;
+  }
+  .about_text {
+    width: 100%;
+    height: 400px;
+  }
+  .about_text h1 {
+    font-size: 86px;
+  }
+  .about_text span {
+    margin: 10px;
+  }
+  .about_text span:nth-of-type(1) {
+    left: 12%;
+  }
+  .about_text span:nth-of-type(2) {
+    left: 22%;
+  }
+  /* ---------------- Section : 2.Accommodation ---------------- */
+  .roomType_wrap {
+    width: 90%;
+  }
+  /* ---------------- Section : 2.다이닝 ---------------- */
+  .dining_wrap {
+    width: 90%;
+  }
+  .dining_img .area:nth-of-type(1) {
+    width: 350px;
+    height: 100%;
+    grid-row: 2 span;
+  }
+  .dining_img div {
+    overflow: hidden;
+  }
+  .dining_img div .table_wrap {
+    overflow: hidden;
+  }
+  .dining_img div table {
+    width: 80%;
+  }
+  /* 3번째 테이블 */
+  /* ---------------- Section : 5.레져 ---------------- */
+  .leisure_wrap {
+    width: 90%;
+  }
+  /* ---------------- Section : 6.부대시설 ---------------- */
+  .facilities_wrap {
+    width: 90%;
+  }
+  .tabs .facilities_img_wrap {
+    width: 500%;
+  }
+  .tabs .facilities_img_wrap .f_img {
+    width: 100%;
+  }
+  .facilities_img_wrap .f_img .table_wrap table {
+    width: 80%;
+  }
+  /* ---------------- Section : Wedding Banner ---------------- */
+  .wedding_banner {
+    height: 300px;
+  }
+  .wedding_banner::before {
+    height: inherit;
+  }
+  .wedding_banner > div {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  /* Footer________________________________________ */
+  .footer_wrap {
+    width: 90%;
+  }
+  .footer_wrap nav {
+    padding: 0 15px;
+  }
+}
