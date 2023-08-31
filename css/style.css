@@ -438,7 +438,7 @@ header {
   width: 1400px;
   height: inherit;
   position: relative;
-  transition: 1s;
+  /* transition: 1s; */
 }
 .roomType_imgs div:nth-child(1) {
   background: url("../img/room/ondol02.jpg");
@@ -461,22 +461,22 @@ input[name="r_tabmenu"] {
 }
 input[id="roomType01"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(0);
-  animation: roomType01 7s linear infinite alternate both;
+  animation: roomType01 5s linear infinite alternate both;
 }
 input[id="roomType02"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(-1400px);
-  animation: roomType02 4s linear infinite alternate both;
-  animation-delay: 0.5s;
+  animation: roomType02 3s linear infinite alternate both;
+  animation-delay: 1s;
 }
 input[id="roomType03"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(-2800px);
-  animation: roomType03 4s linear infinite alternate both;
-  animation-delay: 0.5s;
+  animation: roomType03 3s linear infinite alternate both;
+  animation-delay: 1s;
 }
 input[id="roomType04"]:checked ~ .roomType_tabs .roomType_imgs div {
   transform: translateX(-4200px);
-  animation: roomType04 7s linear infinite alternate both;
-  animation-delay: 0.5s;
+  animation: roomType04 5s linear infinite alternate both;
+  animation-delay: 1s;
 }
 .r_slide_btn {
   width: 100%;
@@ -1115,7 +1115,7 @@ address {
   }
 }
 @keyframes roomType02 {
-  0% {
+0% {
     background: url("../img/room/gallery_double01.jpg") no-repeat;
     background-size: cover;
   }
