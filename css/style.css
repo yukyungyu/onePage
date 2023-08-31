@@ -7,7 +7,7 @@
 html {
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 * {
@@ -73,6 +73,11 @@ table th {
 table .noBorder {
   border: none !important;
 }
+
+
+
+
+
 /* Header________________________________________ */
 header {
   position: fixed;
@@ -130,6 +135,12 @@ header {
 .menu li a.active::before {
   width: 100%;
 }
+
+
+
+
+
+
 /* Section________________________________________ */
 /* ---------------- Section : Main ---------------- */
 .main {
@@ -179,13 +190,14 @@ header {
 }
 /* Mouse Wheele */
 .mouse-box {
-  position: fixed;
-  bottom: 180px;
-  right: 200px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 5;
 }
 .mouse {
-  border: 2px solid #555;
+  border: 2px solid #fff;
   position: absolute;
   width: 32px;
   height: 45px;
@@ -195,7 +207,7 @@ header {
   position: absolute; /* inline-block으로 변경됨 */
   width: 4px;
   height: 15px;
-  background-color: #555;
+  background-color: #eee;
   border-radius: 4px;
   left: 12px;
   top: 10px;
@@ -208,7 +220,7 @@ header {
 .arrow1,
 .arrow2,
 .arrow3 {
-  color: #555;
+  color: #fff;
   font-size: 31px;
   line-height: 10px;
   position: absolute;
@@ -251,6 +263,41 @@ header {
     opacity: 0;
   }
 }
+
+/* Top버튼 */
+.top-btn {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #111;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 120px;
+  right: 170px;
+  z-index: 5;
+  cursor: pointer;
+  animation: flow 2.5s infinite linear;
+}
+.top-btn i {
+  display: block;
+  color: #fff;
+  margin: 5px 0 -18px;
+}
+.top-btn a {
+  font-size: 22px;
+  color: #fff;
+  position: relative;
+}
+@keyframes flow {
+  0%, 100% {
+    transform:translateY(15%);
+  }
+  50% {
+    transform:translateY(0%);
+  }
+}
+
 /* ---------------- Section : 1.About ---------------- */
 .main_01 {
   padding: 200px 0;
@@ -942,6 +989,12 @@ input[id="tab5"]:checked ~ .f_slide_btn label[for="tab5"]:before {
   transform: scale(1.1);
   transition: 1s ease-in;
 }
+
+
+
+
+
+
 /* Footer________________________________________ */
 footer {
   width: 100%;
@@ -1009,6 +1062,12 @@ address {
   background-color: #eee;
   color: #111;
 }
+
+
+
+
+
+
 /* animation________________________________________ */
 /* text effect */
 @keyframes textIn {
@@ -1016,16 +1075,14 @@ address {
     opacity: 0;
   }
   to {
-    display: 1;
+    opacity: 1;
   }
 }
 @keyframes zoomIn {
   0% {
-    -ms-transform: scale(1, 1);
     transform: scale(1, 1) translateZ(1px);
   }
   100% {
-    -ms-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2) translateZ(1px);
   }
 }
